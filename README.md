@@ -1,7 +1,6 @@
 # Frontend Assignment – React Components
 
-This project contains two reusable UI components built with **React**, **TypeScript**, **TailwindCSS**, and documented with **Storybook**.  
-The goal of the assignment is to create scalable, typed, and tested components that can be reused in modern frontend applications.
+This project contains two reusable UI components built with **React**, **TypeScript**, **TailwindCSS**, and documented with **Storybook**. The goal of the assignment is to create scalable, typed, and tested components that can be reused in modern frontend applications.
 
 ---
 
@@ -10,34 +9,7 @@ The goal of the assignment is to create scalable, typed, and tested components t
 - **TypeScript** (static typing)
 - **TailwindCSS** (utility-first styling)
 - **Storybook** (component documentation)
-- **Jest + React Testing Library** (unit tests)
 - **Vite** (development bundler)
-
----
-
-## 📂 Project Structure
-
-src/
-├── components/
-│ ├── InputField/
-│ │ ├── InputField.tsx 
-│ │ ├── InputField.stories.tsx 
-│ │ ├── InputField.constants.ts
-│ │ └── index.ts 
-│ │
-│ ├── DataTable/
-│ │ ├── DataTable.tsx
-│ │ ├── DataTable.stories.tsx
-│ │ ├── DataTable.constants.ts
-│ │ └── index.ts
-│ │
-│ └── Form.tsx
-│ |__ Table.tsx
-|
-│── App.tsx
-└── main.css 
-
-
 
 ---
 
@@ -67,12 +39,13 @@ Run Storybook to explore the components interactively:
 ```bash
 npm run storybook
 
+```
 
 ## Setup & Installation 
 
 Clone the repo:
 
-```
+```bash
 git clone https://github.com/your-username/frontend-assignment.git
 cd frontend-assignment
 
@@ -80,14 +53,14 @@ cd frontend-assignment
 
 Install dependencies:
 
-```
+```bash
 npm install
 
 ```
 
 Start the development server:
 
-```
+```bash
 npm run dev
 
 ```
