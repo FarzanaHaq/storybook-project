@@ -1,69 +1,93 @@
-# React + TypeScript + Vite
+# Frontend Assignment – React Components
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project contains two reusable UI components built with **React**, **TypeScript**, **TailwindCSS**, and documented with **Storybook**.  
+The goal of the assignment is to create scalable, typed, and tested components that can be reused in modern frontend applications.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
+- **React** (UI library)
+- **TypeScript** (static typing)
+- **TailwindCSS** (utility-first styling)
+- **Storybook** (component documentation)
+- **Jest + React Testing Library** (unit tests)
+- **Vite** (development bundler)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📂 Project Structure
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+src/
+├── components/
+│ ├── InputField/
+│ │ ├── InputField.tsx 
+│ │ ├── InputField.stories.tsx 
+│ │ ├── InputField.constants.ts
+│ │ └── index.ts 
+│ │
+│ ├── DataTable/
+│ │ ├── DataTable.tsx
+│ │ ├── DataTable.stories.tsx
+│ │ ├── DataTable.constants.ts
+│ │ └── index.ts
+│ │
+│ └── Form.tsx
+│ |__ Table.tsx
+|
+│── App.tsx
+└── main.css 
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+
+---
+
+## 🎯 Components
+
+### 1. InputField
+A flexible input component with:
+- Variants: **filled, outlined, ghost**
+- Sizes: **sm, md, lg**
+- States: **disabled, invalid, loading**
+- Features: label, placeholder, helper text, error message  
+- Optional: clear button, password toggle
+
+### 2. DataTable
+A simple, reusable table with:
+- Column sorting
+- Row selection (single/multiple)
+- Loading and empty states
+- Generic typing (`DataTable<T>`)
+
+---
+
+## 📖 Storybook
+
+Run Storybook to explore the components interactively:
+
+```bash
+npm run storybook
+
+
+## Setup & Installation 
+
+Clone the repo:
+
+```
+git clone https://github.com/your-username/frontend-assignment.git
+cd frontend-assignment
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Install dependencies:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+```
+npm install
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+
+Start the development server:
+
+```
+npm run dev
+
 ```
